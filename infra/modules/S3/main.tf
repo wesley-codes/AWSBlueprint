@@ -1,12 +1,9 @@
-
-
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.aws_s3_bucket_name
 
   lifecycle {
     prevent_destroy = false
   }
-
 
   tags = {
     Name        = "${var.aws_s3_bucket_name}-TerraMesh"
@@ -56,9 +53,8 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 
   tags = {
-     Name        = "${var.aws_dynamodb_table_name}-dynamoDB-table-TerraMesh"
+    Name        = "${var.aws_dynamodb_table_name}-dynamoDB-table-TerraMesh"
     Environment = var.environment
     Terraform   = "true"
   }
 }
-

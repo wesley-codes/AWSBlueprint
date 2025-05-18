@@ -32,3 +32,9 @@ variable "environment" {
   type        = string
   
 }
+
+variable "database_subnet_group_name" {
+  description = "Name of the database subnet group"
+  type        = string
+  
+}
