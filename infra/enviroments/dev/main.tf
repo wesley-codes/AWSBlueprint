@@ -25,7 +25,7 @@ module "rds" {
   db_name               = each.value.db_name
   username              = each.value.username
   password              = each.value.password
-
+  environment           = var.environment
 }
 
 

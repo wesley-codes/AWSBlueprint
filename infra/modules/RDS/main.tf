@@ -16,6 +16,7 @@ module "rds" {
   subnet_ids                          = var.db_private_subnets_id
   db_subnet_group_name                = var.db_subnet_group_name
   skip_final_snapshot                 = true
+  
 
   tags = {
     Name        = var.identifier
